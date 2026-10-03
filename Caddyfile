@@ -1,0 +1,3 @@
+salas.seu-dominio.com {
+    reverse_proxy relay:8747
+}
