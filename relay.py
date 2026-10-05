@@ -126,7 +126,7 @@ def handle(peer, message):
         broadcast(room,roster(room)); return
     if t == 'start' and peer.id == 1:
         chapter = message.get('chapter',1)
-        if chapter not in (1,2): return
+        if chapter not in (1,2,3): return
         if not room['start'] and any(not m['ready'] or not m['peer'] for m in room['members'].values()):
             peer.error('Espere todos estarem conectados e prontos.'); return
         team = room['start']['team'] if room['start'] else len(room['members'])
